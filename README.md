@@ -115,12 +115,6 @@ You can place this shortcode on any page or post, and it will render the full bl
 
 ---
 
-## 📎 GitHub Repository
-
-🔗 [GitHub Repository Link](#)
-
----
-
 ## 🙌 Contribution & Support
 
 Feel free to fork the repository and submit pull requests.  
