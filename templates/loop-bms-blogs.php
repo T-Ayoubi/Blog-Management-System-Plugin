@@ -12,7 +12,7 @@ if (empty($query)) return;
 
                     <!-- Featured Image -->
                     <?php
-                    $fallback_image = BMS_PLUGIN_URL . 'assets/images/fallback.jpg';
+                    $fallback_image = BMS_PLUGIN_URL . 'assets/images/fallback-image.png';
                     $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'medium');
                     $image_to_show = $thumbnail_url ? $thumbnail_url : $fallback_image;
                     ?>
