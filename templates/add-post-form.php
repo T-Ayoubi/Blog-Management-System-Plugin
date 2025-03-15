@@ -1,6 +1,6 @@
 <?php
 if (!is_user_logged_in()) {
-    echo '<p>You must be logged in to add a post.</p>';
+    echo '<p style="margin-bottom: 0px !important; text-align: center;">You must be logged in to add a post.</p>';
     return;
 }
 ?>

@@ -19,8 +19,7 @@ get_header();
         ?>
 
         <!-- ADD BLOG BUTTON -->
-            <button id="bms-add-blog-btn" class="bms-btn">+ Add New Blog</button>
-
+        <button id="bms-add-blog-btn" class="bms-btn">+ Add New Blog</button>
 
     </div>
 
@@ -28,19 +27,24 @@ get_header();
     <?php
     $query = $wp_query;
 
-    // Include the shared blog loop template
-    include BMS_PLUGIN_PATH . 'templates/loop-bms-blogs.php';
+    if ($query->have_posts()) :
+        // Include the shared blog loop template
+        include BMS_PLUGIN_PATH . 'templates/loop-bms-blogs.php';
+    else :
+        // Display message if no blogs exist
+        ?>
+        <p style="text-align: center;">No blogs found. You can <strong>add new blogs</strong> by clicking the button above.</p>
+    <?php
+    endif;
     ?>
 
     <!-- ADD POST FORM MODAL -->
-        <div id="bms-modal" class="bms-modal">
-            <div class="bms-modal-content">
-                <span class="bms-close">&times;</span>
-                <?php include BMS_PLUGIN_PATH . 'templates/add-post-form.php'; ?>
-            </div>
+    <div id="bms-modal" class="bms-modal">
+        <div class="bms-modal-content">
+            <span class="bms-close">&times;</span>
+            <?php include BMS_PLUGIN_PATH . 'templates/add-post-form.php'; ?>
         </div>
-
-
+    </div>
 
 </div>
 
