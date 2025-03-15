@@ -35,7 +35,16 @@ Use the shortcode (`[bms_blog_list]`)  to display the blog post listing, includi
 
 You can place this shortcode on any page or post, and it will render the full blog management interface.
 
-### 2. API Endpoints (JWT Secured)
+### 2. Registering the Custom Post Type Archive
+To ensure that the archive page for the custom post type is registered correctly, please save the permalinks after activating the plugin. This will ensure that WordPress flushes the rewrite rules and registers the custom post type's archive URL.
+
+To do this:
+1. Go to **Settings** → **Permalinks** in your WordPress admin dashboard.
+2. Simply click **Save Changes** without making any changes.
+
+This step is crucial for proper functionality of the custom post type archive page.
+
+### 3. API Endpoints (JWT Secured)
 
 | Method | Endpoint                         | Description         |
 |--------|----------------------------------|---------------------|
