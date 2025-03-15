@@ -30,13 +30,14 @@ class Blog_Management_System {
     public function enqueue_assets() {
 
         // Enqueue CSS
-        wp_enqueue_style('bms-style',BMS_PLUGIN_URL . 'assets/css/bms-style.css',[],'1.0');
+        wp_enqueue_style('bms-style', BMS_PLUGIN_URL . 'assets/css/bms-style.css', [], '1.0');
 
         // Enqueue JS
-        wp_enqueue_script('bms-add-post',BMS_PLUGIN_URL . 'assets/js/bms-script.js',['jquery'],'1.0',true);
+        wp_enqueue_script('bms-add-post', BMS_PLUGIN_URL . 'assets/js/bms-script.js', ['jquery'], '1.0', true);
 
-        // Pass ajax_url to JS
-        wp_localize_script('bms-add-post', 'bmsAddPost', array('ajax_url' => admin_url('admin-ajax.php'),));
+        // Pass ajax_url to JS 
+        wp_localize_script('bms-add-post', 'bmsAjaxObj', array('ajax_url' => admin_url('admin-ajax.php'),));
     }
+
 
 }

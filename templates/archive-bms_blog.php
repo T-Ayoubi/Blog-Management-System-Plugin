@@ -18,23 +18,21 @@ get_header();
         }
         ?>
 
-        <!-- ADD BLOG BUTTON (Admins Only) -->
-        <?php if (current_user_can('manage_options')) : ?>
+        <!-- ADD BLOG BUTTON -->
             <button id="bms-add-blog-btn" class="bms-btn">+ Add New Blog</button>
-        <?php endif; ?>
+
 
     </div>
 
     <!-- BLOG LISTING GRID -->
     <?php
-    // Use the default global WP query on archive pages
     $query = $wp_query;
 
     // Include the shared blog loop template
     include BMS_PLUGIN_PATH . 'templates/loop-bms-blogs.php';
     ?>
 
-    <!-- ADD POST FORM MODAL (Any Logged-in User) -->
+    <!-- ADD POST FORM MODAL -->
         <div id="bms-modal" class="bms-modal">
             <div class="bms-modal-content">
                 <span class="bms-close">&times;</span>

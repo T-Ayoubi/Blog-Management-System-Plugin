@@ -37,24 +37,22 @@ class BMS_Shortcodes {
                         include BMS_PLUGIN_PATH . 'templates/search-bms.php';
                     }
 
-                    // ADD BLOG BUTTON (Admins Only)
-                    if (current_user_can('manage_options')) {
+                    // ADD BLOG BUTTON
                         echo '<button id="bms-add-blog-btn" class="bms-btn">+ Add New Blog</button>';
-                    }
+
                     ?>
                 </div>
             <?php
             // BLOG LISTING GRID
             include BMS_PLUGIN_PATH . 'templates/loop-bms-blogs.php';
 
-            // ADD POST FORM MODAL (Admins Only)
-            if (current_user_can('manage_options')) {
+            // ADD POST FORM MODAL
                 echo '<div id="bms-modal" class="bms-modal">
                         <div class="bms-modal-content">
                             <span class="bms-close">&times;</span>';
                 include BMS_PLUGIN_PATH . 'templates/add-post-form.php';
                 echo '</div></div>';
-            }
+
 
             echo '</div>';
 

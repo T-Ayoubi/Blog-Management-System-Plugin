@@ -40,8 +40,8 @@ class BMS_CPT_Blog {
         $args = [
             'labels'             => $labels,
             'public'             => true,
-            'has_archive'        => true, // Enables the archive page
-            'rewrite'            => ['slug' => 'bms_blog'], // URL slug
+            'has_archive'        => true, 
+            'rewrite'            => ['slug' => 'bms_blog'], 
             'show_in_rest'       => true,
             'supports'           => ['title', 'editor', 'thumbnail'],
             'menu_position'      => 5,
@@ -101,10 +101,8 @@ class BMS_CPT_Blog {
      * Display the Author Name field inside the meta box
      */
     public function display_author_metabox($post) {
-        // Get existing value
         $author_name = get_post_meta($post->ID, 'author_name', true);
         
-        // Add nonce for verification
         wp_nonce_field('bms_blog_author_nonce', 'bms_blog_author_nonce_field');
         ?>
 
@@ -149,7 +147,6 @@ class BMS_CPT_Blog {
      * Filter posts by blog_category on archive page
      */
     public function bms_filter_blogs_by_category($query) {
-        // Target frontend archive queries only
         if (!is_admin() && $query->is_main_query() && is_post_type_archive('bms_blog')) {
 
             if (!empty($_GET['blog_category'])) {
@@ -162,7 +159,6 @@ class BMS_CPT_Blog {
                 ]);
             }
 
-            // Optional: Handle search by title
             if (!empty($_GET['s'])) {
                 $query->set('s', sanitize_text_field($_GET['s']));
             }

@@ -22,6 +22,7 @@
     max-width: 1200px !important;
     margin: 0 auto !important;
     padding: 1rem !important;
+	width:100% !important;
 }
 
 .bms-page-title {
@@ -189,8 +190,8 @@
 }
 
 .bms-modal {
-    display: none !important;
-    position: fixed !important;
+    display: none ;
+    position: fixed ;
     z-index: 1000 !important;
     left: 0 !important;
     top: 0 !important;
@@ -300,7 +301,7 @@
     width: 100% !important;
     height: 100% !important;
     background-color: rgba(255, 255, 255, 0.8) !important;
-    display: flex !important;
+    display: flex ;
     justify-content: center !important;
     align-items: center !important;
     z-index: 1000 !important;
@@ -441,8 +442,8 @@
 }
 
 @keyframes bms-spin {
-    0% { transform: rotate(0deg) !important; }
-    100% { transform: rotate(360deg) !important; }
+    0% { transform: rotate(0deg) ; }
+    100% { transform: rotate(360deg) ; }
 }
 
 .bms-add-post-form.blur {
